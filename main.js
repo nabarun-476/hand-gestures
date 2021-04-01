@@ -1,4 +1,4 @@
-var url = "https://teachablemachine.withgoogle.com/models/-iamCOJuX/model.json/";
+var url = "https://teachablemachine.withgoogle.com/models/RvYC62Jrg/model.json";
 
 Webcam.set({
     width: 350,
@@ -52,22 +52,22 @@ function gotResult(error, results) {
         prediction_2 = results[1].label;
         speak();
         if (results[0].label == "Amazing") {
-            document.getElementById("update_emoji").innerHTML = "&#128077;";
-        }
-        if (results[0].label == "victory") {
             document.getElementById("update_emoji").innerHTML = "&#128076;";
         }
-        if (results[0].label == "well done") {
+        if (results[0].label == "victory") {
             document.getElementById("update_emoji").innerHTML = "&#9996;";
         }
-        if (results[1].label == "Amazing") {
-            document.getElementById("update_emoji2").innerHTML = "&#128077;";
+        if (results[0].label == "well done") {
+            document.getElementById("update_emoji").innerHTML = "&#128077;";
         }
-        if (results[1].label == "victory") {
+        if (results[1].label == "Amazing") {
             document.getElementById("update_emoji2").innerHTML = "&#128076;";
         }
-        if (results[1].label == "well done") {
+        if (results[1].label == "victory") {
             document.getElementById("update_emoji2").innerHTML = "&#9996;";
+        }
+        if (results[1].label == "well done") {
+            document.getElementById("update_emoji2").innerHTML = "&#128077;";
         }
     }
 }
