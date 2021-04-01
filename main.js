@@ -51,7 +51,7 @@ function gotResult(error, results) {
         prediction_1 = results[0].label;
         prediction_2 = results[1].label;
         speak();
-        if (results[0].label == "Amazing") {
+        if (results[0].label == "amazing") {
             document.getElementById("update_emoji").innerHTML = "&#128076;";
         }
         if (results[0].label == "victory") {
@@ -60,7 +60,7 @@ function gotResult(error, results) {
         if (results[0].label == "well done") {
             document.getElementById("update_emoji").innerHTML = "&#128077;";
         }
-        if (results[1].label == "Amazing") {
+        if (results[1].label == "amazing") {
             document.getElementById("update_emoji2").innerHTML = "&#128076;";
         }
         if (results[1].label == "victory") {
